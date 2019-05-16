@@ -37,7 +37,7 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
+int _execute(stack_t **head, char *token, int line_number);
 int get_line(FILE *file);
 int isNumeric(const char *str);
 void (*get_function)(stack_t **stack, unsigned int line_number);
