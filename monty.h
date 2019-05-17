@@ -47,7 +47,7 @@ void pall(stack_t **head, unsigned int n);
 void pint(stack_t **head, unsigned int line_number);
 void swap(stack_t *head, unsigned int n);
 void add(stack_t *head, unsigned int n);
-void nop(stack_t *head, unsigned int n);
+void nop(void);
 void free_dlistint(stack_t *head);
 
 #endif /* HOLBERTON_H */
