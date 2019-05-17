@@ -13,10 +13,10 @@ int _execute(stack_t **head, char *token, int line_number)
 	int count, sw = 0;
 	char *m = " unknown instruction ";
 	instruction_t inst[] = {
+		{"pint", pint},
 		{"pall", pall},
 		{"push", push},
 		{"pop", pop},
-		{"pint", pint},
 		{"nop", nop},
 		{"add", add},
 		{NULL, NULL}
