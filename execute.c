@@ -18,6 +18,7 @@ int _execute(stack_t **head, char *token, int line_number)
 		{"pop", pop},
 		{"pint", pint},
 		{"nop", nop},
+		{"add", add},
 		{NULL, NULL}
 	};
 
