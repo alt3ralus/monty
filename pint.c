@@ -2,7 +2,7 @@
 /**
  * pint - Prints the first node.
  * @head: A pointer to the head of the list.
- * @n: global var.
+ * @line_number: Data.
  * Return: Void.
  */
 void pint(stack_t **head, unsigned int line_number)

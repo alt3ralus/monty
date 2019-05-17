@@ -15,8 +15,10 @@ int _execute(stack_t **head, char *token, int line_number)
 	instruction_t inst[] = {
 		{"pall", pall},
 		{"push", push},
-		{"pint", pint},
 		{"pop", pop},
+		{"pint", pint},
+		{"nop", nop},
+		{"pint", pint},
 		{NULL, NULL}
 	};
 
