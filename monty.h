@@ -42,12 +42,12 @@ int get_line(FILE *file);
 int isNumeric(const char *str);
 void (*get_function)(stack_t **stack, unsigned int line_number);
 void push(stack_t **head, unsigned int n);
-void pop(stack_t *head, unsigned int n);
+void pop(stack_t **head, unsigned int n);
 void pall(stack_t **head, unsigned int n);
 void pint(stack_t **head, unsigned int line_number);
-void swap(stack_t *head, unsigned int n);
-void add(stack_t *head, unsigned int n);
 void nop(void);
+void swap(stack_t **head, unsigned int n);
+void add(stack_t **head, unsigned int n);
 void free_dlistint(stack_t *head);
 
 #endif /* HOLBERTON_H */
