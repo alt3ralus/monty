@@ -16,6 +16,7 @@ int _execute(stack_t **head, char *token, int line_number)
 		{"pall", pall},
 		{"push", push},
 		{"pint", pint},
+		{"pop", pop},
 		{NULL, NULL}
 	};
 
@@ -30,6 +31,9 @@ int _execute(stack_t **head, char *token, int line_number)
 	if (sw == 1)
 		inst[count].f(head, ++line_number);
 	else
+	{
 		fprintf(stderr, "L%d:%s%s\n", ++line_number, m, token);
+		exit(EXIT_FAILURE);
+	}
 	return (0);
 }
