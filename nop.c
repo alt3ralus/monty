@@ -5,4 +5,4 @@
  *
  * Return: Void.
  */
-void nop(void);
+void nop(stack_t **head, unsigned int line_number);
