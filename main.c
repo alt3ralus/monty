@@ -12,7 +12,7 @@ int main(int ac, char **av)
 
 	if (ac != 2)
 	{
-		fprintf(stderr, "USAGE: monty file");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(av[1], "r+");
@@ -22,6 +22,7 @@ int main(int ac, char **av)
 		exit(EXIT_FAILURE);
 	}
 	get_line(file);
+	fflush(stdout);
 	fclose(file);
 	return (0);
 }
