@@ -9,14 +9,19 @@
 void add(stack_t **head, unsigned int line_number)
 {
 	stack_t *temp;
+	char *msg = "can't add, stack too short";
 
 	if (!head || !*head)
 	{
-		fprintf(stderr, "L%i: can't add, stack too short", line_number);
+		fprintf(stderr, "L%i: %s\n", line_number, msg);
+		free_dlistint(*head);
 		exit(EXIT_FAILURE);
 	}
 	temp = *head;
-	*head = (*head)->next;
-	(*head)->n += temp->n;
+	if ((*head)->next)
+	{
+		*head = (*head)->next;
+		(*head)->n += temp->n;
+	}
 	free(temp);
 }
