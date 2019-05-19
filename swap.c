@@ -14,7 +14,7 @@ void swap(stack_t **head, unsigned int line_number)
 
 	if (!head || !*head || !(*head)->next)
 	{
-		fprintf(stderr, "%d%s\n", line_number, msg);
+		fprintf(stderr, "L%d%s\n", line_number, msg);
 		free_dlistint(*head);
 		exit(EXIT_FAILURE);
 	}
