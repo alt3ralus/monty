@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- *
- *
- *
+ * swap -  function to swap the data of the nodes
+ * @head: head of the nodes
+ * @line_number: line of the command
  */
 
 void swap(stack_t **head, unsigned int line_number)
@@ -21,11 +21,11 @@ void swap(stack_t **head, unsigned int line_number)
 
 	tail = *head;
 	h = *head;
-	for(x = 0; tail->next; x++)
+	for (x = 0; tail->next; x++)
 		tail = tail->next;
 
 
-	for( ; x / 2 != 0; x--)
+	for ( ; x / 2 != 0; x--)
 	{
 		temp = h->n;
 		h->n = tail->n;
