@@ -9,7 +9,7 @@
 void swap(stack_t **head, unsigned int line_number)
 {
 	stack_t *tail, *h;
-	int temp = 0, x;
+	int temp = 0;
 	char *msg = ": can't swap, stack too short";
 
 	if (!head || !*head || !(*head)->next)
@@ -20,17 +20,9 @@ void swap(stack_t **head, unsigned int line_number)
 	}
 
 	tail = *head;
-	h = *head;
-	for (x = 0; tail->next; x++)
-		tail = tail->next;
+	h = (*head)->next;
 
-
-	for ( ; x / 2 != 0; x--)
-	{
-		temp = h->n;
-		h->n = tail->n;
-		tail->n = temp;
-		h = h->next;
-		tail = tail->prev;
-	}
+	temp = h->n;
+	h->n = tail->n;
+	tail->n = temp;
 }
